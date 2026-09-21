@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // console.log("Program Start");
+        // console.log(x);
+        // console.log("program End");
+
+
+        // //Try catch finamlly block
+        // // try => code runs here that might throw error
+        // //catch => Handle error
+        // //finally => always run (error or not)
+
+        // try{
+        //     console.log("program Start");
+        //     console.log(x);
+        // }
+        // catch(err){
+        //     console.log(err);
+        // }
+        // finally{
+        //     console.log("inside finally block");
+        // }
+
+        // // Error throw
+
+        // const dividend = prompt('enter a divided');
+        // const divisor =prompt ("enter a divisor");
+        // const res= dividend/divisor;
+        // console.log("result",res);
+
+        // try{
+        //     const dividend = prompt("enter a dividend")
+        //     const divisor = prompt("enter a divisor")
+        //     if(divisor ==0){
+        //         throw new Error("divisor cannot be zero")
+        //     }
+        //     const res= dividend/divisor;
+        //     console.log("result",res);
+        // }
+        // catch(err){
+        //     console.error(err);
+        // }
+        // finally{
+        //     console.log("inside final block");
+        // }
+
+
+
+
+
+
+        //   Build in function
+
+        // document.write("<h1> build in function <h1>")
+
+        // 1. document.write()
+        // display text on the webpage
+        // document.write("Hello world <br>")
+
+
+        // 2.alert()
+        // Display poput message
+        // alert("welcome to javascript")
+
+        //3.console.log()
+        //Display message in console
+        //console.log("this is a console message") 
+
+        //4. parseint()
+        //convert string into integer
+        // let num = parseInt('100')
+
+
+        //5.nummber()
+        // convert string into number
+        // let value = number("50")
+        // document.write("number result:"+value+"<br>")
+
+
+        // 6.isNaN()
+        // cheack wheather value is NOT a number
+        // let cheak = inNaN("333");
+        // document.write("is 'ABC' number?"+cheak+"<br>");
+
+
+        // 7.prompt()
+        // get input from the User
+        // let userName=prompt("enter your name")
+        // document.write("hello"+userName+"<br>")
+
+
+        //String
+
+
+        // document.write("<hr>")
+        // document.write("<h1>String<h1>");
+
+            // 1.Single Quotes
+
+            // let course ='javascript';
+
+
+            //2.double quates
+
+            // let name= "abu"
+
+            //3.Backticks
+
+            // let message = "hello world"
+
+            // document.write("single quotes"+course+"<br>")
+            // document.write("double quotes"+name+"<br>")
+            // document.write("Backtick"+message+"<br>")
+
+
+            //String Properties
+
+
+
+            // document.write("<h2>String properties<h2>");
+
+                // .length
+                // return the number of  character
+
+                // let studentName="abu"
+                // document.write("length of Abu"+studentName.length+<br>)
+
+
+                //String Methods
+
+                // document.write("<h2>String method<h2>");
+
+                    // 1. to Uppercase
+                    //Converts letters into uppercase
+
+                    // let text = 'ayana';
+
+                    // document.write("toUpperCAase():"+text.toUpperCase()+"<br>");
+
+                    //2.toLowerCase
+                    // convert letter into lowercase
+
+                    // document.wwrite("toLowerCase():"+text.toLowerCase()+"<br>")
+
+                    // 3. trim()
+                    //remove whitespace from beggining and end
+
+                    // let spaceName ="        ayana        ";
+                    //  document.wwrite("trim():"+spaceName.trim()+"<br>");
+
+                   // 4. charAt()
+
+                    // let word = "Hello";
+
+                    // document.write(
+                    //     "charAt(0): " + word.charAt(0) + "<br>"
+                    // );
+
+                    // document.write(
+                    //     "charAt(1): " + word.charAt(4) + "<br>"
+                    // );
+
+
+                    // // // 5. includes()
+
+                    // let welcome = "Welcome to JavaScript";
+
+                    // document.write(
+                    //     "includes('JavaScript'): " +
+                    //     welcome.includes("JavaScript") +
+                    //     "<br>"
+                    // );
+
+
+                    // // // 6. indexOf()
+
+                    // let language = "JavaScript";
+
+                    // document.write(
+                    //     "indexOf('S'): " +
+                    //     language.indexOf("S") +
+                    //     "<br>"
+                    // );
+
+
+                    // // // 7. replace()
+
+                    // let sentence = "I like JavaScript";
+
+                    // let result = sentence.replace("JavaScript", "Python");
+
+                    // document.write(
+                    //     "replace(): " + result + "<br>"
+                    // );
+
+
+                    // // // 8. slice()
+
+                    // let programming = "JavaScript";
+
+                    // document.write(
+                    //     "slice(0, 4): " +
+                    //     programming.slice(0, 4) +
+                    //     "<br>"
+                    // );
+
+
+                    // // // 9. split()
+
+                    // let fruits = "Apple,     ,Banana,Orange";                                     
+
+                    // let fruitArray = fruits.split(" ");
+
+                    // document.write(
+                    //     "split(): " +
+                    //     fruitArray +
+                    //     "<br>"
+                    // );
+
+                    // console.log("Split Result:", fruitArray);
+
+
+                    // // // STRING CONCATENATION
+                    // // // ######################################################
+
+
+                    // let firstName = "Ayana";
+                    // let lastName = "Santhosh";
+
+                    // let fullName = firstName + " " + lastName;
+
+                    // document.write(
+                    //     "Full Name: " + fullName + "<br>"
+                    // );
+
+
+                    // // // TEMPLATE LITERALS
+                    // // // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+                    // let myName = "Ayana";
+                    // let myCourse = "JavaScript";
+
+                    // let myMessage =
+                    //     `My name is ${myName} and I am learning ${myCourse}.`;
+
+                    // document.write(
+                    //     myMessage + "<br>"
+                    // );
+
+                    // // // STRING IMMUTABILITY
+                    // // // ======================================================
+
+                    // let originalName = "ayana";
+
+                    // originalName.toUpperCase();
+
+
+
+                    // document.write(
+                    //     "Original String: " +
+                    //     originalName +
+                    //     "<br>"
+                    // );
+
+                    // let newName = originalName.toUpperCase();
+
+                    // document.write(
+                    //     "New String: " +
+                    //     newName +
+                    //     "<br>"
+                    // );
+
+                    // console.log("Original String:", originalName);
+                    // console.log("New String:", newName);
+
+
+
+
+                // ======================================================
+                //                    MATH FUNCTIONS
+                // ======================================================
+
+
+            // // 1. Math.round()
+            // // Rounds a number to the nearest integer.
+
+            // let roundNumber = Math.round(4.2);
+
+            // console.log(roundNumber);
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 2. Math.floor()
+            // // Always rounds DOWN.
+
+            // let floorNumber = Math.floor(10.9);
+
+            // console.log(floorNumber);
+
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 3. Math.ceil()
+            // // Always rounds UP.
+
+            // let ceilNumber = Math.ceil(4.1);
+
+            // console.log(ceilNumber);
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 4. Math.sqrt()
+            // // Finds the square root of a number.
+
+            // let squareRoot = Math.sqrt(8);
+
+            // console.log(squareRoot);
+
+
+            // // ------------------------------------------------------
+
+
+            // // 5. Math.pow()
+            // // Finds the power of a number.
+
+            // let power = Math.pow(2, 3);
+
+            // console.log(power);
+
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 6. Math.max()
+            // // Finds the largest number.
+
+            // let largest = Math.max(10, 20, 5, 8);
+
+            // console.log(largest);
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 7. Math.min()
+            // // Finds the smallest number.
+
+            // let smallest = Math.min(10, 20, 5, 8);
+
+            // console.log(smallest);
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 8. Math.random()
+            // // Generates a random number  // between 0 (included) and 1 (not included).
+
+
+            // let randomNumber = Math.random();
+
+            // console.log(randomNumber);
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 9. Math.abs()
+            // // Removes the negative (-) sign.
+
+            // let absoluteNumber = Math.abs(-110);
+
+            // console.log(absoluteNumber);
+
+
+
+            // // ------------------------------------------------------
+
+
+            // // 10. Math.trunc()
+            // // Removes the decimal part.
+
+
+            // let truncatedNumber = Math.trunc(4.9);
+
+            // console.log(truncatedNumber);
+
+
+
+
+            // // ======================================================
+            // //                    DATE FUNCTIONS
+            // // ======================================================
+
+
+            // // 1. new Date()
+            // // Creates the current date and time.
+
+            // let d = new Date();
+
+            // console.log(d);
+
+
+            // // ------------------------------------------------------
+
+
+            // // 2. new Date(year, month, date)
+            // // Creates a specific date.
+            // //
+            // // Month starts from 0.
+            // // 0 = January
+            // // 1 = February
+            // // 2 = March
+            // // 3 = April
+            // // 4 = May
+            // // 5 = June
+            // // 6 = July
+            // // 7 = August
+
+            // let d = new Date(2025, 7, 12);
+
+            // console.log(d);
+
+
+            //  // ------------------------------------------------------
+
+
+            // // 3. new Date("YYYY-MM-DD")
+            // // Creates a specific date using a string.
+
+            // let d = new Date("2026-08-06");
+
+            // console.log(d);
+
+
+            // // ------------------------------------------------------
+
+
+            // // 4. new Date(milliseconds)
+            // // Creates a date from milliseconds
+            // // since January 1, 1970.
+
+
+            // let d = new Date(1786517400000);
+
+            // console.log(d);
+
+
+            // // ======================================================
+            // //                    GET DATE VALUES
+            // // ======================================================
+
+
+            // // 5. getFullYear()
+
+            // let d = new Date();
+
+            // console.log(d.getFullYear());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 6. getMonth()
+            // // Gets the month.
+
+
+            // let d = new Date();
+
+            // console.log(d.getMonth());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 7. getDate()
+            // // Gets the day of the month.
+
+            // let d = new Date();
+
+            // console.log(d.getDate());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 8. getDay()
+            // // Gets the day of the week.
+            // //
+            // // Sunday = 0
+            // // Monday = 1
+            // // Tuesday = 2
+            // // Wednesday = 3
+            // // Thursday = 4
+            // // Friday = 5
+            // // Saturday = 6
+
+            // let d = new Date();
+
+            // console.log(d.getDay());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 9. getHours()
+            // // Gets the current hour.
+
+            // let d = new Date();
+
+            // console.log(d.getHours());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 10. getMinutes()
+            // // Gets the current minutes.
+
+            // let d = new Date();
+
+            // console.log(d.getMinutes());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 11. getSeconds()
+            // // Gets the current seconds.
+
+            // let d = new Date();
+
+            // console.log(d.getSeconds());
+
+
+            // // ======================================================
+            // //                    CHANGE DATE
+            // // ======================================================
+
+
+            // // 12. setFullYear()
+            // // Changes the year.
+
+            // let d = new Date();
+
+            // d.setFullYear(2025);
+
+            // console.log(d);
+
+
+            // // ------------------------------------------------------
+
+
+            // // 13. setMonth()
+            // // Changes the month.
+            // // 0 = January
+
+
+            // let d = new Date();
+
+            // d.setMonth(0);
+
+            // console.log(d);
+
+
+            // // ------------------------------------------------------
+
+
+            // // 14. setDate()
+            // // Changes the date.
+
+            // let d = new Date();
+
+            // d.setDate(20);
+
+            // console.log(d);
+
+
+            // // ======================================================
+            // //                    DATE CONVERSION
+            // // ======================================================
+
+
+            // // 15. toDateString()
+            // // Converts the date into a readable date string.
+
+            // let d = new Date(2026, 7, 12);
+
+            // console.log(d.toDateString());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 16. toISOString()
+            // // Converts the date into ISO format.
+            // // Format:
+            // // YYYY-MM-DDTHH:MM:SS.millisecondsZ
+
+
+            // let d = new Date(2026, 7, 12, 11, 30);
+
+            // console.log(d.toISOString());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 17. toLocaleDateString()
+            // // Converts the date into local date format.
+
+            // let d = new Date(2026, 7, 12);
+
+            // console.log(d.toLocaleDateString());
+
+
+            // // ------------------------------------------------------
+
+
+            // // 18. toLocaleTimeString()
+            // // Converts the time into local time format.
+
+            // let d = new Date(2026, 7, 12, 11, 30);
+
+            // console.log(d.toLocaleTimeString());
+
+
+            // // ======================================================
+            // //                    DATE DIFFERENCE
+            // // ======================================================
+
+
+            // // 19. Date Difference
+            // // the difference in milliseconds.
+
+            // let start = new Date("2026-08-01");
+
+            // let end = new Date("2026-08-06");
+
+            // let diffMs = end - start;
+
+            // console.log(diffMs);
+
+
+            // // Convert milliseconds into days.
+
+            // let diffDays = diffMs / (1000 * 60 * 60 * 24);
+
+            // console.log(diffDays);   // one day in millisecond
+
+            // // 1000 milliseconds = 1 second
+            // // 60 seconds        = 1 minute
+            // // 60 minutes        = 1 hour
+            // // 24 hours          = 1 day
+
+
+
+
+
+
+
+
+            // // ======================================================
+            // //                    DATE COMPARISON
+            // // ======================================================
+
+
+            // // 20. Date Comparison
+            // // Result is true or false.
+
+            // let start = new Date("2026-08-01");  
+
+            // let end = new Date("2026-08-06");
+
+            // console.log(start < end);
+            // console.log(start > end);
+            // console.log(start <= end);
+            // console.log(start >= end);
+            // console.log(start == end);
+            // console.log(start === end);
+
+
+
+
+        
+
+          //1. single inheritace
+
+        //   class Animal{
+        //     eat(){
+        //         console.log('Animal eats food');
+        //     }
+        //   }
+        //   class Dog extends Animal{
+        //     bark(){
+        //         console.log('dog barks');
+        //     }
+        //   }
+        //   let d =new Dog()
+        //   d.eat();
+        //   d.bark();
+
+        //   2. multilevel inheritace
+
+        // class Animal{
+        //     eat(){
+        //         console.log("Animal eats");
+        //     }
+        // }
+        // class Dog extends Animal{
+        //     bark(){
+        //         console.log("dog barking");
+        //     }
+        // }
+        // class Puppy extends Dog{
+        //     play(){
+        //         console.log("puppy plays");
+        //     }
+        // }
+        // let p = new Puppy();
+        // p.eat();
+        // p.bark();
+        // p.play();
+
+
+        // 3. hierarchical inheritace
+
+        // class Animal{
+        //     eat(){
+        //         console.log("animal eats");
+        //     }
+        // }
+
+        // class Dog extends Animal{
+        //     bark(){
+        //         console.log("dog barks");
+        //     }
+        // }
+        // class Cat extends Animal{
+        //     meow(){
+        //         console.log("cat meow");
+        //     }
+        // }
+        // let dog=new Dog();
+        // dog.eat();
+        // dog.bark()
+
+        // let cat = new Cat();
+        // cat.eat();
+        // cat.meow();
+
+        // 4. multiple inheritace
+
+        // let father={
+        //     work(){
+        //         console.log("father can work");
+        //     }
+        // };
+        // let mother={
+        //     cook(){
+        //         console.log("mother can cook");
+        //     }
+        // };
+
+        // class child{
+        // }
+        // Object.assign(child.prototype,father,mother);
+
+        // let ch =new child();
+
+        // ch.work();
+        // ch.cook();
+
+        // // super keyword
+
+        // class Person{
+        //     constructor(name){
+        //         this.name = name;
+        //     }
+        // }
+        // //super()
+        // class Student extends Person{
+        //     constructor(name,course){
+        //         super(name);
+        //         this.course=course;
+        //     }
+        //     display(){
+        //         console.log(this.name);
+        //         console.log(this.course);
+        //     }
+        // }
+
+        // let s=new Student('diya','python')
+        // s.display()
+
+        // // super method
+
+        // class Animal{
+        // speak(){
+        //     console.log("Animal makes a sound ");
+        // }
+        // }
+        // //super method()
+
+        // class Dog extends Animal{
+        //     speak(){
+        //         super.speak();
+        //         console.log("dog barks");
+        //     }
+
+        // }
+        
+        // let d =  new Dog();
+        // d.speak();
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
