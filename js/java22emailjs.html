@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    
+      <style>
+        .error{
+            color: red;
+        }
+        .success{
+            color: green;
+        }
+      </style>
+    
+</head>
+<body>
+    <h2>Contact us</h2>
+    <form id="contactForm">
+       
+        <label>Name</label>
+        <input type="text" id="name"><br><br>
+        <label>Email</label>
+        <input type="text" id="email"><br><br>
+        <label >subject</label>
+        <input type="text" id="subject"><br><br>
+        <label>message</label>
+         <input type="text" id="message"><br><br>
+        <button type="submit">send message</button>
+    </form>
+
+    <p id="status"></p>
+
+    <script>
+
+        emailjs.init({
+            publicKey:"LCppsPblc_-UF46NP"
+        });
+
+        let contactForm = document.getElementById("contactForm");
+        contactForm.addEventListener("submit",(e)=>{
+            e.preventDefault();
+
+            let name=document.getElementById("name").value
+            let email=document.getElementById("email").value
+            let subject=document.getElementById("subject").value
+            let message=document.getElementById("message").value
+
+
+
+            let templateParams = {
+                name:name,
+                email:email,
+                subject:subject,
+                message:message
+            }
+
+localStorage.setItem("data",JSON.stringify(templateParams))
+            emailjs.send(
+                "service_5izrqim",
+                "template_j9b5yia",
+                 templateParams
+            )
+            .then((response)=>{
+                console.log("success");
+                document.getElementById('status').textContent="message send successfully";
+                let status = document.getElementById("status");
+                status.classList.add("success")
+                contactForm.reset();
+            })
+            .catch((error)=>{
+                console.log("failde",error);
+                document.getElementById("status").textContent="failed to send message";
+                let status = document.getElementById("status")
+                status.classList.add("error")
+            })
+        })
+        
+
+
+    </script>    
+</body>
+</html>

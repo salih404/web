@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo classe */
+
+
+        a:link{
+            color: green;
+            text-decoration: none;
+        }      
+        a:visited{
+            color: purple;
+        }      
+        a:hover{
+            color: red;
+            font-size: 20px;
+        }
+        a:active{
+            color: yellow;
+        }
+        input:focus{
+            background-color: aqua;
+            border: 3px solod orange;
+            outline: none;  
+        }
+
+
+         /* pseudo element */
+         .before-example::before{
+            content: "hai";
+            font-size: 20px;
+            }
+            .after-example::after{
+                content: "hee";
+                color: green;
+            }
+            .first-letter-example::first-letter{
+                font-size: 35px;
+                color: blue;
+                font-weight: bold;
+            }
+            .first-line-example::first-line{
+                color: rgb(255, 39, 172);
+                font-weight: bold;
+            }
+            ::selection{
+                background-color: chartreuse;
+                color: white;
+            }
+
+            /* combinators */
+
+
+            .descendant div p{
+                color: red;
+            }
+            .child > p{
+                color: blue;
+
+            }
+            .adjacent h3 + h2{
+                color: green;
+
+            }
+            .generator h3 ~ p{
+                color: orange;
+            }
+    </style>
+</head>
+<body>
+    <h1>CSS Day</h1>
+    <h1>psuedo classes, psudo Elements & Combination</h1>
+    <section>
+        <h2>Psude Classes</h2>
+        <h3>Hover,active,link,Visit</h3>
+        <a href="https://google.com"> visit google</a>
+        <a href="about">Not visited</a>
+        <br><br>
+        <h3>Focus Example</h3>
+        <input type="text" placeholder="enter your name">
+    </section>
+    <section>
+        <h2>Psudo Elements</h2>
+        <p class="before-example">This paragraph uses ::before</p>
+        <p class="after-example">This paragraph uses ::after</p>
+        <p class="first-letter-example">This paragraph uses ::first-letter psudo element</p>
+         <p class="first-line-example">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minus corporis perferendis neque nulla reprehenderit id laboriosam mollitia ut ipsum. Nisi esse assumenda quae cumque dicta perspiciatis, nam harum deleniti!</p>
+    </section>
+    <section class="descent">
+        <h2>descent selector (space)</h2>
+        <div>
+            <p>this paragraph is inside the div</p>
+            <article>
+                <p>this paragraph is inside the div through article</p>
+            </article>
+        </div>
+    </section>
+    <section class="chile">
+        <h2>chils selector (>)</h2>
+        <p>Direct child paragraph</p>
+        <div>
+            <p>this paragrph is insid div so child selector will note effect</p>
+        </div>
+    </section>
+    <section class="adjacent">
+        <h2>adjecent sibling selector (+)</h2>
+        <h3>heading</h3>
+        <p>this paragraph come immediatly after h3</p>
+        <p>this paragraph not get style</p>
+    </section>
+    <section class="general">
+        <h2>general sibling selector (~)</h2>
+        <h3>heading</h3>
+        <p>paragraph 1</p>
+        <p>paragraph 2</p>
+        <div>
+            <p>paragraph inside div</p>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<!-- xs 12px 
+     xm 14px    
+     edge 18px
+     xl 20px
+     2xl 24px
+     4xl 36px
+
+     PADDING
+     1 4px
+     2 8px
+     3 12px
+     4  16px
+     5  20px
+     6  24px
+
+     p8 32px
+     p10 40px
+     p12 48px 
+     p16 64px
+
+     pm - full side, pl- left padding, pr- right padding
+    Responise sizes @media
+        default
+        sm 640px+
+        md 768px+
+        lg 1024px+
+        xl 1280px+
+
+      -->
+<body>
+    <h1 class="text-4xl font-semibold text-indigo-700 text-center">Hello CSS</h1>
+    <button  class="bg-red-500 p-3  rounded-full  hover:p-8 hover:bg-green-600 hover:bg-blue-700">SUBMIT</button>
+    <hr>
+    <div class="flex justify-center bg-green-600 bg-linear-to-r from-cyan-500 bg-violet-600 to-orange-300 ">
+        <div class="bg-linear-to-r from-red-500 via-yellow-400 to-orange-300 m-8 p-6 w-2xs h-50 text-center border-5
+                border-red-800 rounded-full">
+            <p>Apple</p>
+            <p>Price: 40</p>
+        </div>
+        <div class="bg-violet-600 m-8 p-6 shadow-2xl shadow-red-500 w-2xs h-50 text-center">
+            <p>Orange</p>
+            <p>Price: 50</p>
+        </div>
+        <div class="bg-red-500 m-8 p-6 shadow-2xl shadow-black-500 w-2xs h-50 text-center">
+            <p>Bannana</p>
+            <p>Price: 60</p>
+        </div>
+
+        <div class="bg-red-500 m-8 p-6 shadow-2xl shadow-black-500 w-2xs h-50 text-center bg-linear-to-r from-cyan-500 via-yellow-500 to-violet-500">
+            <p>Grapes</p>
+            <p>Price: 100</p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
